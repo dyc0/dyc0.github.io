@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Детаљи</title>
+  <title>$title$</title>
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
@@ -19,10 +19,13 @@
     </nav>
   </aside>
   <main id="content">
-    <h1>Детаљи</h1>
-    <p class="post-date">2026-05-14</p>
-    <p>Не знам шта бих написао у овом делу, па нек буде празан за сад.
-    Ко жели да ме контактира, боље да то не ради.</p>
+$if(title)$
+    <h1>$title$</h1>
+$endif$
+$if(date)$
+    <p class="post-date">$date$</p>
+$endif$
+    $body$
   </main>
 </div>
 </body>
